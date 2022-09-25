@@ -9,11 +9,38 @@ console.log("A professional README document generator has been created to allow 
 // TODO: Create an array of questions for user input
 const questions = [];
     // Title of the project
-    // Description of the project
-    //  Installation
-    //  Usage
-    //  Contributing
-    //  Tests
+    {
+        type:'input',
+        name: 'title',
+        question: 'What is the title of the project?',
+        validate: userInput => {
+            if (userInput) {
+                return true;
+            }else{
+                console.log('Insert tile of the project');
+                return false;
+            }
+        }
+    }
+
+    //Description of the project
+
+    //Table of Conents
+
+    //Installation
+
+
+
+    //Usage
+
+    //License
+
+    //Contributing
+
+
+    //Tests
+
+
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
