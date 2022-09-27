@@ -38,9 +38,15 @@ inquirer
         // },
         {
             type: 'input',
-            name: 'description',
+            name: 'background',
             message:'Provide a short description explaining the backgorund concept of your project'
         },
+            //Table of Contents
+            // If the README document is expected to be lengthly, a table of contents is addded to make it easier for the user to view the contents of the page
+
+            // Research how to do ol's in markdown 
+
+            //Description of the project
         {
             type: 'input',
             name: 'description',
@@ -59,46 +65,129 @@ inquirer
         {
             type: 'input',
             name: 'description',
-            message: 'What are the key features of the application?'
+            message: 'What are the key features of the project?'
         }, 
-        
-            //Table of Contents
-            // If the README document is expected to be lengthly, a table of contents is addded to make it easier for the user to view the contents of the page
-
-            // Research how to do ol's in markdown 
-
 
             //Installation
         {
             type: 'input',
-            name: 'How can the user install the application',
-            message: 'installation guide'
+            name: 'nistallation guide',
+            message: 'How can the user install the application?'
         },   
             //Usage     
         {
             type: 'input',
-            name: 'How can a user test the applciation?',
-            message: 'test'
+            name: 'test',
+            message: 'How can a user test the application?'
         },  
+        {   //Tests
+            type: 'input',
+            name: 'testing',
+            message: 'What testing was performed on this project?'
+        },
+        {   //Github Username
+            type: 'input',
+            name: 'github',
+            message: 'what is your GitHub username?',
+        },
+        {   //Add email
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
+
+        },
+        {   //Add screenshot
+            type: 'input',
+            name: 'screenshot',
+            message: 'Add file pathname to screenshot image',
+        },
+        {
+            type: 'input',
+            name: 'url',
+            message: 'what is the url of the deployed application?'
+
+        },
             //License      
         {
             type: 'list',
             name: 'license',
             message: 'What licences are required for this application?',
-            choices: 'Apache License 2.0', 'MIT License', 'Mozilla Public License 2.0', 'Boost Software License 1.0', 'The Unilicense'. 'GNU AGPLv3'
+            choices: 'Apache License 2.0', 'MIT License', 'Mozilla Public License 2.0', 'Boost Software License 1.0', 'The Unilicense'. 'GNU AGPLv3', 'No License'
         },
             //Contributing
         {   type: 'input',
-            name: 'Provide details to how contributors can contribute towards this project?',
-            message: 'contribute'
+            name: 'contribute',
+            message: 'Who are the contributors of this project? And provide details to how contributors can contribute towards this project?'
         },
-            //Tests
-        {   type: 'input',
-            name: '',
-            message: ''
-        },
+            
+
 
     ])
+
+    .then((data) => {
+
+        const readme = generateREADME(data);
+        fs.writeFile('README.md', readme, (err) =>
+            err ? console.log(err) : console.log('Success!')
+        );
+        console.log(readme);
+    });
+
+    function generateREADME(data) {
+        return `
+    # ${data.title}
+    ${data.background}
+    The repository for this application can be found at: ${data.github}
+    If you have any questions regarding this application, email: ${data.email} 
+
+    // ${data.table of contents}
+    ${data.description}
+    ${data.installation}
+    ${data.usage}
+    ${data.test}  
+    ${data.contributors}
+     
+ 
+    Below is a screenshot of the application:
+    ![${data.title}-screenshot](${data.screenshot})
+
+    `
+    }
+
+    function renderLicenseLink(data) {
+        const licenseLink = data.license;
+        switch (licenseLink) {
+            case 'Apache Licence 2.0':
+                return 'https://www.apache.org/licenses/LICENSE-2.0';
+                break;
+    
+            case 'MIT License':
+                return 'https://opensource.org/licenses/MIT';
+                break;
+
+            case 'Mozilla Public License 2.0':
+                return 'https://opensource.org/licenses/MPL-2.0';
+                break;
+            
+            case 'Boost Software License 1.0':
+                return 'https://www.boost.org/LICENSE_1_0.txt'
+                break;
+
+            case 'The Unilicense':
+                return 'http://unlicense.org'
+                break;
+    
+            case 'GNU GPLv3 License':
+                return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
+                break;
+                
+            case 'no license':
+                return "";
+                break;
+        }
+    }
+
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { }
 

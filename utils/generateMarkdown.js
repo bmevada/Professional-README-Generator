@@ -19,6 +19,9 @@ function renderLicenseBadge(license) {
   if (license === 'GNU AGPLv3'){
     return '![License: GNU AGPLv3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)'
   }
+  if (license === ''){
+    return ''
+  }
 }
 
 // TODO: Create a function that returns the license link
@@ -41,6 +44,9 @@ function renderLicenseLink(license) {
   }
   if (license === 'GNU AGPLv3'){
     return '![License: GNU AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)'
+  }
+  if (license === ''){
+    return ''
   }
 }
 
