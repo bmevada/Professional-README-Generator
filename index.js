@@ -112,7 +112,7 @@ inquirer
             type: 'list',
             name: 'license',
             message: 'What licences are required for this application?',
-            choices: 'Apache License 2.0', 'MIT License', 'Mozilla Public License 2.0', 'Boost Software License 1.0', 'The Unilicense'. 'GNU AGPLv3', 'No License'
+            choices: ['Apache License 2.0', 'MIT License', 'Mozilla Public License 2.0', 'Boost Software License 1.0', 'The Unilicense'. 'GNU AGPLv3', 'No License']
         },
             //Contributing
         {   type: 'input',
@@ -180,7 +180,7 @@ inquirer
             case 'GNU GPLv3 License':
                 return 'https://www.gnu.org/licenses/gpl-3.0.en.html';
                 break;
-                
+
             case 'no license':
                 return "";
                 break;
@@ -192,7 +192,17 @@ inquirer
 function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
-function init() { }
+function init() {
+    fs.writeFile(fileName, data, (err) =>
+    err? console.log(err) : console.log('success! File Created!'))
+ };
 
 // Function call to initialize app
+init() {
+    inquirer.prompt(questions).then((data) => {
+        const readmeFile = generateMarkdown(data);
+        writeToFile("generatedReadMe.md",readmeFile);
+    });
+}
+
 init();
