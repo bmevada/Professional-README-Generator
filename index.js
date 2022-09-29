@@ -9,7 +9,7 @@ console.log("A professional README document generator has been created to allow 
 // TODO: Create an array of questions for user input
 inquirer
     .prompt([
-         // Title of the project
+        // Title of the project
         {
             type: 'input',
             name: 'title',
@@ -22,64 +22,64 @@ inquirer
             //     return false;
             // }
         },
-        
+
         //Description of the project
         // {
         //     type: 'input',
         //     name: 'description',
         //     question: 'Provide a short description explaining the what, why and how of your project. 1. What was your motivation?; Why did you build this project? and What problem does it solve?',
-            // validate: userInput => {
-            //     if (userInput) {
-            //         return true;
-            //     } else {
-            //         console.log('Insert tile of the project');
-            //         return false;
-            //     }
+        // validate: userInput => {
+        //     if (userInput) {
+        //         return true;
+        //     } else {
+        //         console.log('Insert tile of the project');
+        //         return false;
+        //     }
         // },
         {
             type: 'input',
             name: 'background',
-            message:'Provide a short description explaining the backgorund concept of your project'
+            message: 'Provide a short description explaining the backgorund concept of your project'
         },
-            //Table of Contents
-            // If the README document is expected to be lengthly, a table of contents is addded to make it easier for the user to view the contents of the page
+        //Table of Contents
+        // If the README document is expected to be lengthly, a table of contents is addded to make it easier for the user to view the contents of the page
 
-            // Research how to do ol's in markdown 
+        // Research how to do ol's in markdown 
 
-            //Description of the project
+        //Description of the project
         {
             type: 'input',
             name: 'description',
             message: 'What was your motivation?',
-        },        
+        },
         {
             type: 'input',
             name: 'description',
             message: 'Why did you build this project?'
-        },        
+        },
         {
             type: 'input',
             name: 'description',
             message: 'What problem does it solve?'
-        }, 
+        },
         {
             type: 'input',
             name: 'description',
             message: 'What are the key features of the project?'
-        }, 
+        },
 
-            //Installation
+        //Installation
         {
             type: 'input',
             name: 'nistallation guide',
             message: 'How can the user install the application?'
-        },   
-            //Usage     
+        },
+        //Usage     
         {
             type: 'input',
             name: 'test',
             message: 'How can a user test the application?'
-        },  
+        },
         {   //Tests
             type: 'input',
             name: 'testing',
@@ -107,19 +107,20 @@ inquirer
             message: 'what is the url of the deployed application?'
 
         },
-            //License      
+        //License      
         {
             type: 'list',
             name: 'license',
             message: 'What licences are required for this application?',
             choices: ['Apache License 2.0', 'MIT License', 'Mozilla Public License 2.0', 'Boost Software License 1.0', 'The Unilicense'. 'GNU AGPLv3', 'No License']
         },
-            //Contributing
-        {   type: 'input',
+        //Contributing
+        {
+            type: 'input',
             name: 'contribute',
             message: 'Who are the contributors of this project? And provide details to how contributors can contribute towards this project?'
         },
-            
+
 
 
     ])
@@ -133,23 +134,24 @@ inquirer
         console.log(readme);
     });
 
-    function generateREADME(data) {
-        return `
+function generateREADME(data) {
+    return `
     # ${data.title}
     ${data.background}
     The repository for this application can be found at: ${data.github}
     If you have any questions regarding this application, email: ${data.email} 
 
-    // ${data.table of contents}
-    ${data.description}
-    ${data.installation}
-    ${data.usage}
-    ${data.test}  
-    ${data.contributors}
+    // ${data.table of contents
+}
+    ${ data.description }
+    ${ data.installation }
+    ${ data.usage }
+    ${ data.test }  
+    ${ data.contributors }
      
  
     Below is a screenshot of the application:
-    ![${data.title}-screenshot](${data.screenshot})
+![${ data.title } - screenshot](${ data.screenshot })
 
     `
     }
