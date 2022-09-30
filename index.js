@@ -143,7 +143,7 @@ function generateREADME(data) {
     The repository for this application can be found at: ${data.github}
     If you have any questions regarding this application, email: ${data.email} 
 
-    // ${data.table of contents}
+    ${data.tableofcontents}
     ${ data.description }
     ${ data.installation }
     ${ data.usage }
