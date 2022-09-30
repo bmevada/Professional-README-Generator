@@ -39,12 +39,14 @@ inquirer
         {
             type: 'input',
             name: 'background',
-            message: 'Provide a short description explaining the backgorund concept of your project'
+            message: 'Provide a short description explaining the background concept of your project'
         },
         //Table of Contents
         // If the README document is expected to be lengthly, a table of contents is addded to make it easier for the user to view the contents of the page
 
         // Research how to do ol's in markdown 
+
+
 
         //Description of the project
         {
@@ -77,7 +79,7 @@ inquirer
         //Usage     
         {
             type: 'input',
-            name: 'test',
+            name: 'usage',
             message: 'How can a user test the application?'
         },
         {   //Tests
@@ -141,8 +143,7 @@ function generateREADME(data) {
     The repository for this application can be found at: ${data.github}
     If you have any questions regarding this application, email: ${data.email} 
 
-    // ${data.table of contents
-}
+    // ${data.table of contents}
     ${ data.description }
     ${ data.installation }
     ${ data.usage }
@@ -151,7 +152,7 @@ function generateREADME(data) {
      
  
     Below is a screenshot of the application:
-![${ data.title } - screenshot](${ data.screenshot })
+    ![${ data.title } - screenshot](${data.screenshot})
 
     `
     }
@@ -207,4 +208,5 @@ init() {
     });
 }
 
+// Function call to initialize app
 init();
