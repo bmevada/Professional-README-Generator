@@ -29,15 +29,15 @@ const questions = [
         name: 'title',
         message: 'What is the name of your application/project?',
     },
-    {   //Description of the application/project
-        type: 'input',
-        name: 'description',
-        message: 'Provide a short description explaining the what, why and how of your application/project. 1. What was your motivation?; Why did you build this project? and What problem does it solve?'
-    },
     {   //Background
         type: 'input',
         name: 'background',
         message: 'Provide a short description explaining the background concept of your project'
+    },
+    {   //Description of the application/project
+        type: 'input',
+        name: 'description',
+        message: 'Provide a short description explaining the what, why and how of your application/project. 1. What was your motivation?; 2. Why did you build this project? and 3. What problem does it solve?'
     },
     {   //Installation
         type: 'input',
@@ -81,7 +81,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
-    return fs.writeFileSync(path.join(processs.cwd(), fileName), data)
+    return fs.writeFileSync(path.join(process.cwd(), fileName), data)
 };
 
 // TODO: Create a function to initialize app
