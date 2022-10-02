@@ -25,8 +25,10 @@ function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
   # Background
-  *${data.background} 
+
   *Link to deployed page: ${data.url} 
+  * ``md ${data.background} ``md
+   
 
 ## Table of Contents 
 - [Background] (#background)
