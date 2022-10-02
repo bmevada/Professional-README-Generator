@@ -2,7 +2,16 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `[Badge](#license)`;
+    return `[Badge](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return " ";
+}
+
+//TODO: Create a function that returns a license link
+// If there is no license , return an empty string
+function renderLicenseLink(license) {
+  if (license !== 'None') {
+    return `[License](#license)`;
   }
   return " ";
 }
@@ -24,7 +33,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
-  # Background
+# Background
 
   * Link to deployed page: ${data.url} 
   * ${data.background}
