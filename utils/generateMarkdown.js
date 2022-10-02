@@ -74,35 +74,43 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title} ${renderLicenseBadge(data.license)}
 
-## Table of Contents 
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
+  # Background
+  *${data.background} 
+  *Link to deployed page: ${data.url} 
 
+## Table of Contents 
+- [Background] (#background)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
 ${renderLicenseLink(data.license)}
-- [Contribution](#Contribution)
+- [Contribution](#contribution)
 - [Testing](#testing)
 - [Questions](#questions)
+
+
 
 # Description 
 ${data.description}
 
 # Installation 
 Installation instructions are as follows:
-${data.install}
+${data.installation}
 
 # Usage 
-${data.use}
+${data.usage}
 
 # Licensing
-${renderLicenseSection(data.license)}
+The following licenses are required for the application/project:
+*${(data.license)}
 
 # Contribution 
 ${data.contribute}
 
 # Testing 
-* Tests are as follows:
-${data.test}
+Tests are as follows:
+${data.testing}
 
 # Questions 
 If you have any questions about this project please contact via email or Github.
