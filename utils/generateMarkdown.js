@@ -73,7 +73,9 @@ ${data.testing}
 
 # Questions 
 If you have any questions about this project please contact via email or Github.
+
 Email: ${data.email}.
+
 Github: ${data.username}
 
 `;

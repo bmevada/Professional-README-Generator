@@ -22,7 +22,7 @@ const questions = [
     {    //User Github username
         type: 'input',
         name: 'username',
-        message: 'What is your Github username?',
+        message: 'What is your Github profile?',
     },
     {   // Title of the project
         type: 'input',
@@ -59,11 +59,11 @@ const questions = [
         name: 'url',
         message: 'What is the URL of the deployed application/project?'
     },
-    {   //Add screenshot
-        type: 'input',
-        name: 'screenshot',
-        message: 'Add file pathname to screenshot image',
-    },
+    // {   //Add screenshot
+    //     type: 'input',
+    //     name: 'screenshot',
+    //     message: 'Add file pathname to screenshot image',
+    // },
     {    //License 
         type: 'list',
         name: 'license',
