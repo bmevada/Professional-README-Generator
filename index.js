@@ -59,11 +59,11 @@ const questions = [
         name: 'url',
         message: 'What is the URL of the deployed application/project?'
     },
-    // {   //Add screenshot
-    //     type: 'input',
-    //     name: 'screenshot',
-    //     message: 'Add file pathname to screenshot image',
-    // },
+    {   //Add screenshot
+        type: 'input',
+        name: 'screenshot',
+        message: 'Add file pathname to screenshot image',
+    },
     {    //License 
         type: 'list',
         name: 'license',

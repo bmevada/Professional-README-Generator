@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'None') {
-    return `[Badge](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    return `![Badge](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
   return " ";
 }
@@ -31,12 +31,14 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title} ${renderLicenseBadge(data.license)}
+  return `# ${data.title} 
+  ${renderLicenseBadge(data.license)}
+
+  Week 9: Node.js Challenge: Professional README Generator
 
 # Background
 
-  * Link to deployed page: ${data.url} 
-  * ${data.background}
+${data.background}
    
 
 ## Table of Contents 
@@ -71,10 +73,12 @@ ${data.contribute}
 Tests are as follows:
 ${data.testing}
 
+Link to deployed page: ${data.url} 
+
 # Questions 
 If you have any questions about this project please contact via email or Github.
 
-Email: ${data.email}.
+Email: ${data.email}
 
 Github: ${data.username}
 
