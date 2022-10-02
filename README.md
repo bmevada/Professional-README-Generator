@@ -37,9 +37,9 @@ The user will need to perform the test by answering the questions within the VS 
 The only contributor to the project is Bhavika Mevada. Contributors can get in contact with me to contribute towards this project. My details are provided below.
 
 # Testing 
-Tests are as follows:
-The testing was performed within the Terminal successfully generating a README document. 
-<iframe src="https://drive.google.com/file/d/1BvJkjJCmZkhWW4fgRbXrK0kKavEILdR9/preview" width="640" height="480"></iframe>
+The testing was performed within the Terminal successfully generating a README document.
+<img width="1920" alt="main-page" src="https://user-images.githubusercontent.com/109460560/193456613-e71e084b-a8f2-4a67-bd73-2c9f67a4cab3.png">
+
 Link to deployed page: https://drive.google.com/file/d/1BvJkjJCmZkhWW4fgRbXrK0kKavEILdR9/view?usp=sharing 
 
 # Questions 
