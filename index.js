@@ -14,6 +14,16 @@ const questions = [
         name: 'name',
         message: 'What is your name?',
     },
+    {    //User Email address
+        type: 'input',
+        name: 'email',
+        message: 'What is your email?',
+    },
+    {    //User Github username
+        type: 'input',
+        name: 'username',
+        message: 'What is your Github username?',
+    },
     {   // Title of the project
         type: 'input',
         name: 'title',
@@ -41,7 +51,7 @@ const questions = [
     },
     {   //Tests
         type: 'input',
-        name: 'testing',
+        name: 'testin',
         message: 'What testing was performed on this project?'
     },
     {   //Github Username
@@ -70,7 +80,7 @@ const questions = [
         message: 'What licences are required for this application?',
         choices: ['Apache-License-2.0', 'MIT-License', 'Mozilla-Public-License-2.0', 'Boost-Software-License-1.0', 'The-Unilicense'. 'GNU-AGPLv3', 'None']
     },
-    {//Contributing
+    {   //Contributing
         type: 'input',
         name: 'contribute',
         message: 'Who are the contributors of this project? And provide details to how contributors can contribute towards this project?'
