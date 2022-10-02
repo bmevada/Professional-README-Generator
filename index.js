@@ -32,7 +32,7 @@ const questions = [
     {   //Description of the application/project
         type: 'input',
         name: 'description',
-        question: 'Provide a short description explaining the what, why and how of your applciation/project. 1. What was your motivation?; Why did you build this project? and What problem does it solve?'
+        message: 'Provide a short description explaining the what, why and how of your application/project. 1. What was your motivation?; Why did you build this project? and What problem does it solve?'
     },
     {   //Background
         type: 'input',
@@ -51,28 +51,18 @@ const questions = [
     },
     {   //Tests
         type: 'input',
-        name: 'testin',
+        name: 'testing',
         message: 'What testing was performed on this project?'
-    },
-    {   //Github Username
-        type: 'input',
-        name: 'github',
-        message: 'what is your GitHub username?',
-    },
-    {   //Add email
-        type: 'input',
-        name: 'email',
-        message: 'What is your email address?',
-    },
-    {   //Add screenshot
-        type: 'input',
-        name: 'screenshot',
-        message: 'Add file pathname to screenshot image',
     },
     {   //URL of deployed application/project
         type: 'input',
         name: 'url',
         message: 'what is the url of the deployed application/project?'
+    },
+    {   //Add screenshot
+        type: 'input',
+        name: 'screenshot',
+        message: 'Add file pathname to screenshot image',
     },
     {    //License 
         type: 'list',
