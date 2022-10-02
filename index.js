@@ -78,7 +78,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What licences are required for this application?',
-        choices: ['Apache-License-2.0', 'MIT-License', 'Mozilla-Public-License-2.0', 'Boost-Software-License-1.0', 'The-Unilicense'. 'GNU-AGPLv3', 'None']
+        choices: ['Apache', 'MIT', 'Mozilla', 'Boost', 'Unilicense', 'GNU-AGPLv3', 'None']
     },
     {   //Contributing
         type: 'input',
