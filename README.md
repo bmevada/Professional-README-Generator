@@ -1,4 +1,4 @@
-# Professional-ReadMe-Generator ![Badge](https://img.shields.io/badge/license-Apache-blue.svg)
+# Professional-ReadMe-Generator ![Badge](https://img.shields.io/badge/license-MIT-blue.svg)
 
   Week 9: Node.js Challenge: Professional README Generator
 
@@ -31,7 +31,7 @@ The user will need to perform the test by answering the questions within the VS 
 
 
 ## License
-      license used is Apache.
+      license used is MIT.
 
 # Contribution 
 The only contributor to the project is Bhavika Mevada. Contributors can get in contact with me to contribute towards this project. My details are provided below.
@@ -39,8 +39,8 @@ The only contributor to the project is Bhavika Mevada. Contributors can get in c
 # Testing 
 Tests are as follows:
 The testing was performed within the Terminal successfully generating a README document. 
-
-Link to deployed page: This is the URL of the project: https://drive.google.com/file/d/1BvJkjJCmZkhWW4fgRbXrK0kKavEILdR9/view?usp=sharing 
+<iframe src="https://drive.google.com/file/d/1BvJkjJCmZkhWW4fgRbXrK0kKavEILdR9/preview" width="640" height="480"></iframe>
+Link to deployed page: https://drive.google.com/file/d/1BvJkjJCmZkhWW4fgRbXrK0kKavEILdR9/view?usp=sharing 
 
 # Questions 
 If you have any questions about this project please contact via email or Github.

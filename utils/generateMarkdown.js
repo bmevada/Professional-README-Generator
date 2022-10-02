@@ -71,7 +71,7 @@ ${data.contribute}
 # Testing 
 Tests are as follows:
 ${data.testing}
-
+${data.screenshot}
 Link to deployed page: ${data.url} 
 
 # Questions 
