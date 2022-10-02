@@ -1,15 +1,17 @@
-# b ![Github]('https://img.shields.io/badge/License-Apache-blue.svg)
+# b [Badge](#license)
 
   # Background
-  *b 
-  *Link to deployed page: b 
 
-# Table of Contents 
-- [Background] (#background)
+  * Link to deployed page: b 
+  * b
+   
+
+## Table of Contents 
+
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [License]
 - [Contribution](#contribution)
 - [Testing](#testing)
 - [Questions](#questions)
@@ -26,9 +28,9 @@ b
 # Usage 
 b
 
-# Licensing
-The following licenses are required for the application/project:
-*Apache
+
+## License
+      license used is Apache.
 
 # Contribution 
 b

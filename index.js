@@ -41,7 +41,7 @@ const questions = [
     },
     {   //Installation
         type: 'input',
-        name: 'installation',
+        name: 'install',
         message: 'How can the user install the application?'
     },
     {   //Usage 
@@ -57,7 +57,7 @@ const questions = [
     {   //URL of deployed application/project
         type: 'input',
         name: 'url',
-        message: 'what is the url of the deployed application/project?'
+        message: 'What is the URL of the deployed application/project?'
     },
     {   //Add screenshot
         type: 'input',
